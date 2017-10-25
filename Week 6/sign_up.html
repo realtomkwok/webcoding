@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Roboto: 300,400,500" rel="stylesheet">
+	<title>Sign up</title>
+	<style type="text/css">
+		body{
+			font-family:'Roboto', sans-serif;
+			background-image: url(bg.jpg);
+			background-position: top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		h1{
+			font-size: 24pt;
+			font-weight: 300;
+		}
+		label{
+			font-family:'Roboto', sans-serif;
+			font-size: 10pt;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+		#required_dot {
+			color: #c60055;
+		}
+		#submit {
+			position: absolute;
+			right: 0px;
+			width: 92px;
+		}
+		div.form{
+			position: absolute;
+			margin: 20px 400px 50px 50px;
+			padding: 30px;
+			background: #FAFAFA;
+			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14), 0 3px 4px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+			border-radius: 2px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="form">
+		<h1>Sign up</h1>
+		<p class="label">Welcome to the Community! Before you get started, 
+			<br>please complete the form below.</p>
+		<form action="http://listening.gdufs.edu.cn/web/temp/myform.asp" method="post" id="signUp">
+			<fieldset>
+				<legend>Required Information<span id="required_dot">*</span></legend>
+				<label for="userName">User name</label>
+				<br>
+				<input type="text" name="name" required size="30" maxlength="20" placeholder="no more than 20 characters">
+				<br><br>
+				<label for="password">Password</label>
+				<br>
+				<input type="password" name="password" required size="30" minlength="8" placeholder="more than 8 digits">
+				<br><br>
+				<label>Email</label>
+				<br>
+				<input type="email" name="email" required size="50" placeholder="e.g. johnappleseed@apple.com">
+				<br><br>
+				<label>Faculty</label>
+				<br>
+				<select name="faculty" required>
+					<option value="default" selected disabled>Select one...</option>
+					<optgroup label="North Campus">
+						<option value="felc">Faculty of English Language and Culture</option>
+						<option value="seib">School of English for International Business</option>
+						<option value="xiyu">Faculty of European Languages and Cultures</option>
+						<option value="falc">Faculty of Asian Languages and Cultures</option>
+						<option value="fclc">Faculty of Chinese Language and Culture</option>
+						<option value="sits">School of Interpreting and Translation Studies</option>
+						<option value="ic">International College</option>
+						<option value="iie">Institute for International Education</option>
+					</optgroup>
+					<optgroup label="South Campus">
+						<option value="set">School of Economics and Trade</option>
+						<option value="sf">School of Finance</option>
+						<option value="sb">School of Business</option>
+						<option value="sa">School of Accounting</option>
+						<option value="sls">School of Legal Studies</option>
+						<option value="see">School of English Education</option>
+						<option value="csi">Cisco School of Informatics</option>
+						<option value="sppa">School of Politics and Public Administration</option>
+						<option value="sips">School of Ideological and Political Sciences</option>
+						<option value="sjc">School of Journalism and Communication</option>
+						<option value="art">College of Art</option>
+					</optgroup>
+					
+				</select>
+				<br><br>
+				<label>School Register Number </label>
+				<br>
+				<input type="text" name="reg_num" required>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Additional Information</legend>
+
+				<label>Birthdate</label>
+				<br>
+				<input type="date" name="bday">
+				<br><br>
+				<label>Gender</label>
+				<br>
+				<input type="radio" name="gender" value="male"> Male
+				<input type="radio" name="gender" value="female"> Female
+				<input type="radio" name="gender" value="unspecified"> Unspecified
+				<br><br>
+				<label>Area of Interest</label>
+				<br>
+					<input type="checkbox" name="interest" value="sports"> Sports
+					<input type="checkbox" name="interest" value="entertainment"> Entertainment
+					<input type="checkbox" name="interest" value="Design"> Design 
+					<input type="checkbox" name="interest" value="music"> Music
+					<br>
+					<input type="checkbox" name="interest" value="business"> Business
+					<input type="checkbox" name="interest" value="technology"> Technology
+					<input type="checkbox" name="interest" value="politics"> Politics
+					<input type="checkbox" name="interest" value="art"> Art
+					<input type="checkbox" name="interest" value="food"> Food
+				<br><br>
+				<label>Brief Introduction</label>
+				<br>
+				<textarea name="intro" rows="10" cols="50" placeholder="Write about yourself here. Don't be shy."></textarea>
+			</fieldset>
+			<br>
+			<input type="image" src="fab.png" name="submit" id="submit">		
+		</form>
+	</div>
+</body>
+</html>
